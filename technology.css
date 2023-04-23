@@ -1,0 +1,11 @@
+#technology {
+  padding-top: 100px;
+  text-align: center;
+  position: relative;
+}
+#technology .technology-description {
+  margin-top: 20px;
+}
+#technology .technology-description p {
+  color: #5b5e6d;
+}

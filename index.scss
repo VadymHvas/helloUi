@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: inter;
+  height: 1500px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ui-btn {
+  padding: 11px 25px;
+  background-color: #0555ff;
+  color: #fff;
+  border: 2px solid #0555ff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: transparent;
+    color: #0555ff;
+  }
+}
+
+.ui-btn-solid {
+  padding: 11px 25px;
+  background-color: #fff;
+  color: #0555ff;
+  border: none;
+  box-shadow: 0px 10px 40px 0px #b0c9fd4d;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@import url(header.css);
+@import url(main.css);
+@import url(technology.css);
+@import url(skills.css);

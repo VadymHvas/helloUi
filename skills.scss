@@ -1,0 +1,155 @@
+#skills {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  .develop {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .develop-title h1 {
+      font-size: 36px;
+    }
+
+    .develop-description {
+      margin-top: 20px;
+      p {
+        color: #5b5e6d;
+      }
+    }
+
+    .develop-link {
+      margin-top: 25px;
+
+      span {
+        margin-top: 25px;
+        position: relative;
+        font-weight: 500;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background-color: #0555ff;
+          bottom: -1.5px;
+          left: 0;
+        }
+      }
+    }
+
+    .develop-image .image {
+      position: relative;
+
+      #develop-dot {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      #develop-ellipse {
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      #develop-ellipse4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  .build {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .image {
+      position: relative;
+
+      #build-ellipse {
+        position: absolute;
+        z-index: -1;
+        top: 35px;
+      }
+
+      #build-ellipse5 {
+        position: absolute;
+        z-index: -1;
+        bottom: -10px;
+        left: -15px;
+        transform: rotate(-90deg);
+      }
+
+      #build-dot {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+
+    .build-text {
+      .build-title {
+        h1 {
+          font-size: 36px;
+        }
+      }
+
+      .build-description {
+        margin-top: 20px;
+
+        p {
+          color: #5b5e6d;
+        }
+      }
+
+      .build-link {
+        margin-top: 25px;
+
+        span {
+          margin-top: 25px;
+          position: relative;
+          font-weight: 500;
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: #0555ff;
+            bottom: -1.5px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .develop {
+    flex-direction: column;
+
+    .image {
+      #develop-img {
+        width: 100%;
+      }
+    }
+  }
+
+  .build {
+    flex-direction: column;
+
+    .image {
+      #build-img {
+        width: 100%;
+      }
+    }
+  }
+}

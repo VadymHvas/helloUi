@@ -1,0 +1,154 @@
+header {    
+  padding: 16px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .header-brand span {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .menu {
+    display: flex;
+    gap: 25px;
+
+    li a {
+      color: #050038;
+      font-size: 16px;
+    }
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .sign-in a {
+    color: #050038;
+  }
+
+  .burger-menu {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    display: none;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #2b2b2b;
+      transition: all .4s ease;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    span {
+      position: absolute;
+      top: 49%;
+      width: 100%;
+      height: 2px;
+      background-color: #2b2b2b;
+      transition: all .4s ease;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+header.fixed {
+  position: fixed !important;
+  width: 100%;
+  animation-name: fixedHeader;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  background-color: #fff;
+  z-index: 50;
+}
+
+@keyframes fixedHeader {
+  from {
+    top: -73px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu, .header-buttons {
+    display: none !important;
+  }
+
+  .burger-menu {
+    display: block !important;
+  }
+
+  .burger-menu.active::before {
+    transform: rotate(45deg);
+    top: 11.5px;
+  }
+
+  .burger-menu.active span {
+    transform: scale(0);
+  }
+
+  .burger-menu.active::after {
+    transform: rotate(-45deg);
+
+    bottom: 11.5px;
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .menu.open {
+    position: fixed;
+    background-color: #f3f0f0;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 30px;
+    display: block !important;
+    animation-name: adaptMenu;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    padding: 5px 35px;
+
+    li {
+      margin-top: 30px;
+      padding: 15px;
+      transition: all .3s ease;
+
+      &:active {
+        background-color: #cfcccc;
+      }
+
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+
+
+  @keyframes adaptMenu {
+    from {
+      bottom: -100%
+    } to {
+      bottom: 0;
+    }
+  }
+}

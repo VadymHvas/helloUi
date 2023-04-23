@@ -1,0 +1,142 @@
+#skills {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#skills .develop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+#skills .develop .develop-title h1 {
+  font-size: 36px;
+}
+#skills .develop .develop-description {
+  margin-top: 20px;
+}
+#skills .develop .develop-description p {
+  color: #5b5e6d;
+}
+#skills .develop .develop-link {
+  margin-top: 25px;
+}
+#skills .develop .develop-link span {
+  margin-top: 25px;
+  position: relative;
+  font-weight: 500;
+}
+#skills .develop .develop-link span::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #0555ff;
+  bottom: -1.5px;
+  left: 0;
+}
+#skills .develop .develop-image .image {
+  position: relative;
+}
+#skills .develop .develop-image .image #develop-dot {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+#skills .develop .develop-image .image #develop-ellipse {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  z-index: -1;
+}
+#skills .develop .develop-image .image #develop-ellipse4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+#skills .build {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+#skills .build .image {
+  position: relative;
+}
+#skills .build .image #build-ellipse {
+  position: absolute;
+  z-index: -1;
+  top: 35px;
+}
+#skills .build .image #build-ellipse5 {
+  position: absolute;
+  z-index: -1;
+  bottom: -10px;
+  left: -15px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+#skills .build .image #build-dot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#skills .build .build-text .build-title h1 {
+  font-size: 36px;
+}
+#skills .build .build-text .build-description {
+  margin-top: 20px;
+}
+#skills .build .build-text .build-description p {
+  color: #5b5e6d;
+}
+#skills .build .build-text .build-link {
+  margin-top: 25px;
+}
+#skills .build .build-text .build-link span {
+  margin-top: 25px;
+  position: relative;
+  font-weight: 500;
+}
+#skills .build .build-text .build-link span::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #0555ff;
+  bottom: -1.5px;
+  left: 0;
+}
+
+@media (max-width: 992px) {
+  .develop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .develop .image #develop-img {
+    width: 100%;
+  }
+  .build {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .build .image #build-img {
+    width: 100%;
+  }
+}
